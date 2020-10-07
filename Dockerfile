@@ -16,7 +16,7 @@ ADD root /
 #set -x \
 RUN cd /opt \     
     && curl -o sonarqube.zip -fSL https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.7.zip \
-    && unzip sonarqube-7.7.zip \
+    && unzip sonarqube.zip \
     && mv sonarqube-$SONAR_VERSION sonarqube \
     && rm -rf $SONARQUBE_HOME/bin/*
 
