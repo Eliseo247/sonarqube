@@ -23,10 +23,10 @@ RUN
     #&& gpg --keyserver ha.pool.sks-keyservers.net --recv-keys F1182E81C792928921DBCAB4CFCA4A29D26468DE \
 
     && cd /opt \
-    && curl -o sonarqube.zip -fSL https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube.zip \
-    && unzip sonarqube.zip \
+    && curl -o sonarqube.zip -fSL https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.7.zip \
+    && unzip sonarqube-7.7.zip \
     && mv sonarqube-$SONAR_VERSION sonarqube \
-    && rm sonarqube.zip* \
+    #&& rm sonarqube.zip* \
     && rm -rf $SONARQUBE_HOME/bin/*
 
 WORKDIR $SONARQUBE_HOME
