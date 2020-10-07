@@ -22,7 +22,7 @@ RUN
     # sub   2048R/06855C1D 2015-05-25
     #&& gpg --keyserver ha.pool.sks-keyservers.net --recv-keys F1182E81C792928921DBCAB4CFCA4A29D26468DE \
 
-    && cd /opt \
+     cd /opt \
     && curl -o sonarqube.zip -fSL https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.7.zip \
     && unzip sonarqube-7.7.zip \
     && mv sonarqube-$SONAR_VERSION sonarqube \
